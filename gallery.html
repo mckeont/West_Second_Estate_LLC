@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - West Second Estate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg" href="favicon.svg">
+    <!-- Lightbox & Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <style>
+        .swiper-container {
+            padding: 10px;
+        }
+        .swiper-slide {
+            padding: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            max-width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gallery">
+            <center><h2>PROJECTS BEFORE AND AFTER</h2></center>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="media/photo1.jpg" data-lightbox="album"><img src="media/photo1.jpg" alt="Project 1"></a></div>
+                    <div class="swiper-slide"><a href="media/photo2.jpg" data-lightbox="album"><img src="media/photo2.jpg" alt="Project 2"></a></div>
+                    <div class="swiper-slide"><a href="media/photo3.jpg" data-lightbox="album"><img src="media/photo3.jpg" alt="Project 3"></a></div>
+                    <div class="swiper-slide"><a href="media/photo4.jpg" data-lightbox="album"><img src="media/photo4.jpg" alt="Project 4"></a></div>
+                    <div class="swiper-slide"><a href="media/photo5.jpg" data-lightbox="album"><img src="media/photo5.jpg" alt="Project 5"></a></div>
+                    <div class="swiper-slide"><a href="media/photo6.jpg" data-lightbox="album"><img src="media/photo6.jpg" alt="Project 6"></a></div>
+                    <div class="swiper-slide"><a href="media/photo7.jpg" data-lightbox="album"><img src="media/photo7.jpg" alt="Project 7"></a></div>
+                    <div class="swiper-slide"><a href="media/photo8.jpg" data-lightbox="album"><img src="media/photo8.jpg" alt="Project 8"></a></div>
+                    <div class="swiper-slide"><a href="media/photo9.jpg" data-lightbox="album"><img src="media/photo9.jpg" alt="Project 9"></a></div>
+                    <div class="swiper-slide"><a href="media/photo10.jpg" data-lightbox="album"><img src="media/photo10.jpg" alt="Project 10"></a></div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 West Second Estate LLC. All Rights Reserved.</p>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Swiper & Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+    </script>
+</body>
+</html>
