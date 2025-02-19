@@ -65,10 +65,14 @@ nav ul li a:hover {
 
 #background-video {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1; /* Keeps the video behind everything */
 }
+
 
 .overlay {
     position: absolute;
@@ -84,16 +88,11 @@ nav ul li a:hover {
 }
 
 .logo-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 1000px;
+    width: 60vw; /* Scale based on viewport width */
+    max-width: 800px; /* Prevent excessive size */
     opacity: 1;
-    z-index: 999; /* Ensure it appears on top */
+    z-index: 10; /* Ensure it appears above everything */
 }
-
 
 /* Content Sections */
 .content {
