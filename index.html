@@ -13,24 +13,40 @@
         <h2 style="color: #d3d3d3;">Building a Future, One Home at a Time</h2>
         <p style="color: #d3d3d3;">Redefining affordable housing for the 21st century.</p>
     </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mission.html">Mission</a></li>
-            <li><a href="mentorship.html">Mentorship</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="listings.html">Listings</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+
+    // Close menu when clicking a link (for better mobile UX)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
+</script>
+
+
 </header>
     
 <section id="home" class="hero">
-    <video autoplay muted loop id="background-video">
-        <source src="media/stockvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<video autoplay muted loop playsinline id="background-video">
+    <source src="media/stockvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
     <div class="overlay">
         <img src="media/favicon.svg" alt="Company Logo" class="logo-overlay">
     </div>
