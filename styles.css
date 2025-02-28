@@ -53,29 +53,33 @@ nav ul li a {
 nav ul li a:hover {
     color: #de0f3f;
 }
+/* Ensure the menu toggle (☰) is visible on mobile */
 .menu-toggle {
-    display: none;
+    display: block; /* Ensure it's always shown */
     font-size: 24px;
     color: white;
     cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1100; /* Ensure it appears above everything */
 }
+
+/* Adjust navigation for mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
 
 .nav-links {
     display: flex;
     gap: 15px;
 }
 
+/* Ensure the dropdown menu appears above the logo */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        text-align: left;
-        padding: 15px;
-        font-size: 28px;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -83,18 +87,13 @@ nav ul li a:hover {
         width: 100%;
         text-align: center;
         position: absolute;
-        top: 50px;
+        top: 60px;  /* Move the menu down slightly */
         left: 0;
-        padding: 0;
+        z-index: 1000;  /* Ensures it's above other elements */
     }
-    
+
     .nav-links.active {
         display: flex;
-    }
-    
-    .nav-links li {
-        padding: 15px 0;
-        width: 100%;
     }
 
     .nav-links a {
@@ -103,6 +102,17 @@ nav ul li a:hover {
         color: white;
         font-size: 18px;
         text-decoration: none;
+    }
+
+    /* Push down page content when menu is open */
+    body.menu-open {
+        padding-top: 150px; /* Prevents content from being covered */
+    }
+
+    /* Adjust logo overlay position */
+    .logo-overlay {
+        z-index: 1; /* Keeps it below the menu */
+        position: relative;
     }
 }
 

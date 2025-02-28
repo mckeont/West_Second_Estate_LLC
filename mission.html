@@ -56,7 +56,15 @@
 <script>
     function toggleMenu() {
         document.querySelector('.nav-links').classList.toggle('active');
+        document.body.classList.toggle('menu-open'); /* Adjusts padding to prevent overlap */
     }
+
+    // Close menu when clicking a link (for better mobile UX)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('active');
+        });
+    });
 </script>
 
 </body>
