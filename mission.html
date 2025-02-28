@@ -13,8 +13,10 @@
         <h2 style="color: #d3d3d3;">Building a Future, One Home at a Time</h2>
         <p style="color: #d3d3d3;">Redefining affordable housing for the 21st century.</p>
     </div>
+    
     <nav>
-        <ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="mission.html">Mission</a></li>
@@ -25,29 +27,37 @@
         </ul>
     </nav>
 </header>
-    <main>
-        <section id="mission">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="media/image1.jpg" alt="Mentor">
-                </div>
-                <div class="about-text">
-                    <h2>Our Mission</h2>
-                    <p>At West Second Estate, LLC, we are redefining affordable housing with a focus on sustainability, adaptability, and smart technology. Our homes are energy-efficient, modern, and designed for evolving lifestyles, integrating solar power, rainwater harvesting, advanced HVAC, and smart home features like high-speed internet and security systems.</p>
 
-                    <p>We prioritize accessibility and community, incorporating wide doorways, ramps, co-working spaces, and recreational areas to foster inclusive, connected neighborhoods. With flexible layouts, green spaces, and financing support, our homes balance affordability with modern comfort, ensuring a future-ready approach to housing.</p>
-                </div>
+<main>
+    <section id="mission">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="media/image1.jpg" alt="Mentor">
             </div>
-        </section>
-    </main>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>At West Second Estate, LLC, we are redefining affordable housing with a focus on sustainability, adaptability, and smart technology. Our homes are energy-efficient, modern, and designed for evolving lifestyles, integrating solar power, rainwater harvesting, advanced HVAC, and smart home features like high-speed internet and security systems.</p>
 
-    <footer>
-        <p>&copy; 2025 West Second Estate LLC. All Rights Reserved.</p>
-        <div class="social">
-            <a href="#">Facebook</a>
-           <a href="https://www.instagram.com/iamshiannapatron/" target="_blank">Instagram</a>
-            <a href="#">LinkedIn</a>
+                <p>We prioritize accessibility and community, incorporating wide doorways, ramps, co-working spaces, and recreational areas to foster inclusive, connected neighborhoods. With flexible layouts, green spaces, and financing support, our homes balance affordability with modern comfort, ensuring a future-ready approach to housing.</p>
+            </div>
         </div>
-    </footer>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 West Second Estate LLC. All Rights Reserved.</p>
+    <div class="social">
+        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/iamshiannapatron/" target="_blank">Instagram</a>
+        <a href="#">LinkedIn</a>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+</script>
+
 </body>
 </html>

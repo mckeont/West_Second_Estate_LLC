@@ -274,10 +274,43 @@ footer {
     .about-container {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
 
     .about-text {
         text-align: center;
+        padding: 10px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .about-image img {
+        width: 250px;
+    }
+}
+
+/* Ensure Swiper images scale properly */
+.swiper-slide img {
+    width: 100%;  /* Ensure the image fits within the slide */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 400px; /* Prevent images from being too tall */
+    object-fit: contain; /* Ensure the whole image is visible */
+}
+
+.swiper-container {
+    padding: 10px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+/* Mobile-Friendly Swiper Navigation */
+@media screen and (max-width: 768px) {
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
     }
 }
 

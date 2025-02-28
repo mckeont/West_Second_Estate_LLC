@@ -13,8 +13,10 @@
         <h2 style="color: #d3d3d3;">Building a Future, One Home at a Time</h2>
         <p style="color: #d3d3d3;">Redefining affordable housing for the 21st century.</p>
     </div>
+    
     <nav>
-        <ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="mission.html">Mission</a></li>
@@ -25,33 +27,41 @@
         </ul>
     </nav>
 </header>
-    <main>
-        <section id="about">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="media/image2.png" alt="Project Leader">
-                </div>
-                <div class="about-text">
-                    <h2>About Us</h2>
-                    <p>Life has taken me through many chapters—each one preparing me for this moment. I started as a business owner, learning to build from the ground up. Becoming a homeowner taught me the power of ownership, and becoming a landlord showed me how to create cash flow.</p>
 
-                    <p>As a mortgage lender, I helped others finance their dreams. Now, as a developer, I’m not just building homes—I’m building a future. My mission is clear: Black and Brown communities deserve more than just housing. They deserve safe, clean, and beautiful places to call home—neighborhoods designed for sustainability, opportunity, and legacy.</p>
-
-                    <p>That’s why I’m redefining affordable housing for the 21st century. These aren’t just homes; they’re thoughtfully designed, energy-efficient spaces that adapt to modern living. With smart technology, dedicated work areas, and a focus on health and safety, we’re creating communities that uplift and empower.</p>
-
-                    <p>This isn’t just about real estate. It’s about breaking generational cycles, creating opportunities, and leaving a lasting impact. I’ve helped families buy homes—now I’m developing entire communities. And this is just the beginning.</p>
-                </div>
+<main>
+    <section id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="media/image2.png" alt="Project Leader">
             </div>
-        </section>
-    </main>
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Life has taken me through many chapters—each one preparing me for this moment. I started as a business owner, learning to build from the ground up. Becoming a homeowner taught me the power of ownership, and becoming a landlord showed me how to create cash flow.</p>
 
-    <footer>
-        <p>&copy; 2025 West Second Estate LLC. All Rights Reserved.</p>
-        <div class="social">
-            <a href="#">Facebook</a>
-            <a href="https://www.instagram.com/iamshiannapatron/" target="_blank">Instagram</a>
-            <a href="#">LinkedIn</a>
+                <p>As a mortgage lender, I helped others finance their dreams. Now, as a developer, I’m not just building homes—I’m building a future. My mission is clear: Black and Brown communities deserve more than just housing. They deserve safe, clean, and beautiful places to call home—neighborhoods designed for sustainability, opportunity, and legacy.</p>
+
+                <p>That’s why I’m redefining affordable housing for the 21st century. These aren’t just homes; they’re thoughtfully designed, energy-efficient spaces that adapt to modern living. With smart technology, dedicated work areas, and a focus on health and safety, we’re creating communities that uplift and empower.</p>
+
+                <p>This isn’t just about real estate. It’s about breaking generational cycles, creating opportunities, and leaving a lasting impact. I’ve helped families buy homes—now I’m developing entire communities. And this is just the beginning.</p>
+            </div>
         </div>
-    </footer>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 West Second Estate LLC. All Rights Reserved.</p>
+    <div class="social">
+        <a href="#">Facebook</a>
+        <a href="https://www.instagram.com/iamshiannapatron/" target="_blank">Instagram</a>
+        <a href="#">LinkedIn</a>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+</script>
+
 </body>
 </html>
